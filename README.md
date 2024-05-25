@@ -44,3 +44,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+# Erply test
+
+Added prettier for readability and to keep the code clean and have the same style.
+Added toastify for friendly ui errors, where it will give pop ups for errors
