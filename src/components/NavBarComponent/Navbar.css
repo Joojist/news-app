@@ -1,0 +1,11 @@
+.navbar {
+    background-color: #007bff;
+}
+
+.search-icon {
+    margin-left: 1rem;
+}
+
+.search-icon:hover {
+    color: #e0e0e0;
+}

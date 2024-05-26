@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from './NavBarComponent/Navbar';
+import Box from '@mui/material/Box';
 import '../App.css';
 
 interface LayoutProps {
@@ -10,10 +11,10 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, toggleSearchBar, isAuthenticated }) => {
     return (
-        <div>
+        <Box>
             <Navbar toggleSearchBar={toggleSearchBar} isAuthenticated={isAuthenticated} />
-            <main>{children}</main>
-        </div>
+            <Box component="main">{children}</Box>
+        </Box>
     );
 };
 
