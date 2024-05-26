@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Article } from '../../types';
+import { translateErrorCode} from "../../utility/errorTranslator";
 
 interface NewsState {
     articles: Article[];
@@ -36,9 +37,10 @@ export const fetchNews = createAsyncThunk(
                 },
             });
             const totalResults = Math.min(response.data.totalResults, 40); // Limit to 40 results
-            return { articles: response.data.articles.filter((article: Article) => article.url), totalResults };
+            return { articles: response.data.articles.filter((article: Article) => article.url && article.urlToImage), totalResults };
         } catch (error: any) {
-            return rejectWithValue(error.message);
+            const errorMessage = translateErrorCode(error.response.status);
+            return rejectWithValue(errorMessage);
         }
     }
 );

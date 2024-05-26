@@ -1,16 +1,25 @@
 import React from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Snackbar, Alert } from '@mui/material';
 
-export const notifyError = (message: string) => {
-    toast.error(message, {
-        position: 'top-right',
-        autoClose: 5000,
-    });
-};
+interface NotificationProps {
+    message: string;
+    open: boolean;
+    onClose: () => void;
+}
 
-const Notification: React.FC = () => {
-    return <ToastContainer />;
+const Notification: React.FC<NotificationProps> = ({ message, open, onClose }) => {
+    return (
+        <Snackbar
+            open={open}
+            autoHideDuration={6000}
+            onClose={onClose}
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        >
+            <Alert onClose={onClose} severity="error" sx={{ width: '100%' }}>
+                {message}
+            </Alert>
+        </Snackbar>
+    );
 };
 
 export default Notification;

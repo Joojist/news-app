@@ -51,3 +51,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 Added prettier for readability and to keep the code clean and have the same style.
 Added toastify for friendly ui errors, where it will give pop-ups for errors
 Added logos for more simple ui design 
+added @emotion/react": "^11.11.4",
+"@emotion/styled": "^11.11.5",

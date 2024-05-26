@@ -1,7 +1,8 @@
 import React from 'react';
-import StoryList from '../components/StoryList';
-import SearchBar from '../components/SearchBar';
-import Pagination from '../components/Pagination/Pagination';
+import { Container, Box, Typography } from '@mui/material';
+import StoryList from '../components/StoryListComponent/StoryList';
+import SearchBar from "../components/SearchBarComponent/SearchBar";
+import Pagination from '../components/PaginationComponent/Pagination';
 
 interface MainPageProps {
     showSearchBar: boolean;
@@ -9,12 +10,16 @@ interface MainPageProps {
 
 const MainPage: React.FC<MainPageProps> = ({ showSearchBar }) => {
     return (
-        <div>
-            <h1>Top News</h1>
-            <SearchBar className={`search-bar ${showSearchBar ? 'active' : ''}`} />
-            <StoryList />
-            <Pagination />
-        </div>
+        <Container>
+            <Box my={4}>
+                <Typography variant="h4" component="h1" gutterBottom>
+                    Top News
+                </Typography>
+                <SearchBar showSearchBar={showSearchBar} />
+                <StoryList />
+                <Pagination />
+            </Box>
+        </Container>
     );
 };
 
