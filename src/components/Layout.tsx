@@ -4,12 +4,14 @@ import '../App.css';
 
 interface LayoutProps {
     children: React.ReactNode;
+    toggleSearchBar: () => void;
+    isAuthenticated: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, toggleSearchBar, isAuthenticated }) => {
     return (
         <div>
-            <Navbar />
+            <Navbar toggleSearchBar={toggleSearchBar} isAuthenticated={isAuthenticated} />
             <main>{children}</main>
         </div>
     );
