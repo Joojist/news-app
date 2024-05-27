@@ -31,20 +31,22 @@
     align-items: flex-start;
 }
 
-.article-card-media-horizontal {
-    width: 100%;
+.article-card-media {
+    display: block;
+    margin: 0 auto;
     max-width: 400px;
-    height: auto;
     max-height: 300px;
     object-fit: cover;
 }
 
+.article-card-media-horizontal {
+    width: 100%;
+    height: auto;
+}
+
 .article-card-media-vertical {
     width: 100%;
-    max-width: 400px;
     height: auto;
-    max-height: 300px;
-    object-fit: cover;
 }
 
 .article-card-content {

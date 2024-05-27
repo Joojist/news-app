@@ -28,7 +28,6 @@ const Navbar: React.FC<NavbarProps> = ({
     dispatch(resetPage());
     dispatch(setSearchQuery(topic));
     setTimeout(() => {
-      // Ensure that the state updates before fetching news
       dispatch(fetchNews({ token, page: 1, pageSize: 10, query: topic }));
     }, 0);
   };
