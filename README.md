@@ -7,6 +7,7 @@ This project is a news application built using React, Redux, and Material-UI. Th
 - **Toastify**: Integrated for displaying friendly UI error messages through pop-ups.
 - **Logos**: Included for a more streamlined UI design.
 - **Emotion**: Used for writing CSS styles with JavaScript.
+- **App remembers you for 5 min**: It will remember your login credentials for 5 min after logging in, and after its over you will have to log in again. (Added this function because I found it quite annoying, that the app logs me out all the time)
 
 ## How to Install and Run
 
