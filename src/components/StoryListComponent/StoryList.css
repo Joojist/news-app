@@ -14,12 +14,12 @@
 .article-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.2s ease;
     width: 100%;
-    max-width: 100%;
 }
 
 .article-card:hover {
@@ -28,6 +28,7 @@
 
 .article-card-horizontal {
     flex-direction: row;
+    align-items: flex-start;
 }
 
 .article-card-media-horizontal {
@@ -36,7 +37,6 @@
     height: auto;
     max-height: 300px;
     object-fit: cover;
-    flex-grow: 1;
 }
 
 .article-card-media-vertical {
@@ -45,14 +45,14 @@
     height: auto;
     max-height: 300px;
     object-fit: cover;
-    flex-grow: 1;
 }
 
 .article-card-content {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 100%;
+    padding: 16px;
+    overflow: hidden;
 }
 
 .article-card-actions {
@@ -62,17 +62,31 @@
 }
 
 @media (max-width: 768px) {
-    .article-card-media-horizontal,
+    .article-card-horizontal {
+        flex-direction: column;
+    }
+
+    .article-card-media-horizontal {
+        width: 100%;
+        height: auto;
+    }
+
     .article-card-media-vertical {
-        max-width: 100%;
         height: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .article-card-media-horizontal,
+    .article-card-horizontal {
+        flex-direction: column;
+    }
+
+    .article-card-media-horizontal {
+        width: 100%;
+        height: auto;
+    }
+
     .article-card-media-vertical {
-        max-width: 100%;
         height: auto;
     }
 }
