@@ -32,21 +32,20 @@
 }
 
 .article-card-media {
-    display: block;
-    margin: 0 auto;
-    max-width: 400px;
-    max-height: 300px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
+    max-height: 200px; /* Adjust as needed for vertical cards */
 }
 
 .article-card-media-horizontal {
-    width: 100%;
-    height: auto;
+    max-width: 300px; /* Adjust as needed for horizontal cards */
+    max-height: 100%; /* Ensures it stretches top to bottom */
 }
 
 .article-card-media-vertical {
     width: 100%;
-    height: auto;
+    max-height: 300px; /* Adjust as needed */
 }
 
 .article-card-content {
