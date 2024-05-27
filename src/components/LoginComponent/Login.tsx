@@ -50,7 +50,7 @@ const Login: React.FC = () => {
                     type="submit"
                     fullWidth
                     variant="contained"
-                    color="primary"
+                    color="secondary"
                     className="login-button"
                 >
                     Login

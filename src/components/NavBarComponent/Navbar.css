@@ -1,5 +1,19 @@
 .navbar {
-    background-color: #007bff;
+    background: linear-gradient(to right, #007bff, #9c27b0);
+    background-size: 200% 200%;
+    animation: gradient-spin 5s linear infinite;
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
 }
 
 .search-icon {
@@ -8,4 +22,49 @@
 
 .search-icon:hover {
     color: #e0e0e0;
+}
+
+.navbar-button {
+    margin: 0 4px !important;
+    flex-shrink: 0;
+}
+
+@keyframes gradient-spin {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-button {
+        margin: 0 2px;
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    .search-icon {
+        margin-left: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 5px;
+    }
+
+    .navbar-button {
+        margin: 0 1px;
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+
+    .search-icon {
+        margin-left: 0.25rem;
+    }
 }
