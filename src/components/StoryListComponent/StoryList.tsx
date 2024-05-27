@@ -12,6 +12,7 @@ import {
   CardActions,
   Button,
   Box,
+  Link,
 } from "@mui/material";
 import "./StoryList.css";
 import LoadingSpinner from "../SpinnerComponent/LoadingSpinner";
@@ -69,9 +70,17 @@ const StoryList: React.FC = () => {
                 )}
                 <Box className="article-card-content">
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {article.title}
-                    </Typography>
+                    <Link
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      underline="none"
+                      sx={{ color: "black" }}
+                    >
+                      <Typography gutterBottom variant="h5" component="div">
+                        {article.title}
+                      </Typography>
+                    </Link>
                     <Typography
                       variant="body2"
                       color="textSecondary"
