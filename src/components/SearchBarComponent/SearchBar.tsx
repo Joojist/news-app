@@ -40,7 +40,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ showSearchBar }) => {
             />
             <Button
                 variant="contained"
-                color="primary"
+                color="secondary"
                 type="submit"
                 size="small"
             >

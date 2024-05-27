@@ -31,10 +31,6 @@
     padding: 0 16px;
     display: flex;
     align-items: center;
-    background-color: #007BFF;
+    background-color: #9c27b0;
     transition: background-color 0.3s ease;
-}
-
-.search-bar .MuiButton-root:hover {
-    background-color: #0056b3;
 }
