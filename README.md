@@ -1,4 +1,4 @@
-# Erply Test
+# Test
 
 This project is a news application built using React, Redux, and Material-UI. The application fetches news articles and displays them in a user-friendly interface.
 
